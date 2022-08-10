@@ -5,17 +5,18 @@ import { ListaOpcoes } from './components/listaOpcoes'
 import { JanelaInformacoes } from './components/janelaInformacoes';
 
 function App() {
-  const [mostrarJanela, setMostrarJanela] = useState(false);
+  const [pokemon, setPokemon] = useState({});
 
   const displayInfoPokemon = (pokemon) => {
     console.log(pokemon);
+    setPokemon(pokemon);
   }
 
   return (
     <>
       <Header />
       <ListaOpcoes displayInfoPokemon={displayInfoPokemon} />
-      <JanelaInformacoes />
+      <JanelaInformacoes pokemon={pokemon} />
     </>
   );
 }
