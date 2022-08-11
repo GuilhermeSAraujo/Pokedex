@@ -1,5 +1,6 @@
-import { Grid, Box, SvgIcon } from '@mui/material';
+import { Grid, Box, SvgIcon, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
+import { Pokemon } from '../../pokemon'
 import JanelaInformacoesService from '../services/janelaInformacoesService'
 
 function JanelaInformacoes({ pokemon }) {
@@ -14,24 +15,22 @@ function JanelaInformacoes({ pokemon }) {
 			getDadosPokemon();
 		}
 	}, [pokemon]);
-	console.log(dadosPokemon);
 	return (
-		<Grid lg={12}>
-			<Grid lg={6}>
-				{dadosPokemon && dadosPokemon.sprites ? (
-					<Box
-						component="img"
-						sx={{
-							height: 300,
-							width: 300,
-							// maxHeight: { xs: 233, md: 167 },
-							// maxWidth: { xs: 350, md: 250 },
-						}}
-						alt="The house from the offer."
-						src={dadosPokemon.sprites.front_default}
-					/>
-				) : (<h3>Nenhum pokemon selecionado</h3>)}
-			</Grid>
+		<Grid lg={12} justifyContent='center'>
+			{dadosPokemon && dadosPokemon.sprites ? (
+				<Pokemon pokemon={dadosPokemon} />
+				// <Box
+				// 	component="img"
+				// 	sx={{
+				// 		height: 300,
+				// 		width: 300,
+				// 	}}
+				// 	alt="The house from the offer."
+				// 	src={dadosPokemon.sprites.front_default}
+				// />
+			) : (<Typography variant='h6' md={12} lg={12} textAlign='center'>
+				Nenhum Pokémon selecionado
+			</Typography>)}
 		</Grid>
 	);
 }

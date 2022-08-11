@@ -13,12 +13,18 @@ function App() {
   }
 
   return (
-    <Grid lg={12}>
-      <Header />
-      <Grid lg={6} flex>
+    <Grid container md={12} lg={12} sx={{
+      justifyContent: 'center'
+    }}
+      p='1.5rem'
+    >
+      <Grid item md={12} lg={12} pb='2rem'>
+        <Header />
+      </Grid>
+      <Grid item md={6} lg={6}>
         <ListaOpcoes displayInfoPokemon={displayInfoPokemon} />
       </Grid>
-      <Grid lg={6} flex>
+      <Grid item md={6} lg={6}>
         <JanelaInformacoes pokemon={pokemon} />
       </Grid>
     </Grid >
