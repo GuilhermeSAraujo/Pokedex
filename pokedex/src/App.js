@@ -1,4 +1,5 @@
 // import { StyledEngineProvider } from '@mui/material';
+import { Grid } from '@mui/material';
 import { useState } from 'react';
 import { Header } from './components/header'
 import { ListaOpcoes } from './components/listaOpcoes'
@@ -8,16 +9,25 @@ function App() {
   const [pokemon, setPokemon] = useState({});
 
   const displayInfoPokemon = (pokemon) => {
-    console.log(pokemon);
     setPokemon(pokemon);
   }
 
   return (
-    <>
-      <Header />
-      <ListaOpcoes displayInfoPokemon={displayInfoPokemon} />
-      <JanelaInformacoes pokemon={pokemon} />
-    </>
+    <Grid container md={12} lg={12} sx={{
+      justifyContent: 'center'
+    }}
+      p='1.5rem'
+    >
+      <Grid item md={12} lg={12} pb='2rem'>
+        <Header />
+      </Grid>
+      <Grid item md={6} lg={6}>
+        <ListaOpcoes displayInfoPokemon={displayInfoPokemon} />
+      </Grid>
+      <Grid item md={6} lg={6}>
+        <JanelaInformacoes pokemon={pokemon} />
+      </Grid>
+    </Grid >
   );
 }
 
