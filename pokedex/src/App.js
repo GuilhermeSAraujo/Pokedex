@@ -14,7 +14,9 @@ function App() {
 
   return (
     <Grid container md={12} lg={12} sx={{
-      justifyContent: 'center'
+      justifyContent: 'center',
+      backgroundColor: '#87FF84',
+      backgroundSize: '100%'
     }}
       p='1.5rem'
     >
