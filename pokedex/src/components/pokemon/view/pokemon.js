@@ -7,9 +7,12 @@ function Pokemon({ pokemon }) {
 
 	console.log(pokemon);
 	return (
-		<Grid container md={12} lg={12} display='flex'>
+		<Grid container md={12} lg={12} display='flex' sx={{
+			boxShadow: '0px 0px 10px -6px #000000',
+			borderRadius: '5%',
+		}}>
 			<Grid item md={12} lg={12}>
-				<Typography variant='h5' md={12} lg={12} textAlign='center' pb='1rem'>
+				<Typography variant='h5' md={12} lg={12} textAlign='center' pb='1rem' pt='1rem'>
 					{primeiraLetraParaMaiscula(pokemon.name)}
 				</Typography>
 			</Grid >

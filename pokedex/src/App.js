@@ -13,17 +13,17 @@ function App() {
   }
 
   return (
-    <Grid container md={12} lg={12} sx={{
+    <Grid container md={12} lg={12} p='1.5rem' sx={{
       justifyContent: 'center',
       backgroundColor: '#87FF84',
-      backgroundSize: '100%'
+      backgroundSize: '100%',
+      heigth: '100%'
     }}
-      p='1.5rem'
     >
-      <Grid item md={12} lg={12} pb='2rem'>
+      <Grid item md={12} lg={12} pb='2rem' textAlign='center'>
         <Header />
       </Grid>
-      <Grid item md={6} lg={6}>
+      <Grid item md={6} lg={6} alignSelf='center'>
         <ListaOpcoes displayInfoPokemon={displayInfoPokemon} />
       </Grid>
       <Grid item md={6} lg={6}>

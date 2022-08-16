@@ -20,7 +20,7 @@ function ListaOpcoes({ displayInfoPokemon }) {
 	return (
 		<Grid container lg={12} justifyContent='center'>
 			<Grid item lg={6} maxWidth='350px' sx={{
-				border: '5px'
+				border: '5px',
 			}}>
 				<List dense={true} disablePadding={true}
 					sx={{
