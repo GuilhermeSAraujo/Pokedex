@@ -16,7 +16,10 @@ function JanelaInformacoes({ pokemon }) {
 		}
 	}, [pokemon]);
 	return (
-		<Grid lg={12} justifyContent='center'>
+		<Grid lg={12} justifyContent='center' sx={{
+			// boxShadow: '0px 0px 10px -6px #000000',
+			padding: '5px',
+		}}>
 			{dadosPokemon && dadosPokemon.sprites ? (
 				<Pokemon pokemon={dadosPokemon} />
 				// <Box
