@@ -18,8 +18,9 @@ function JanelaInformacoes({ pokemon }) {
 	return (
 		<Grid lg={12} justifyContent='center' sx={{
 			padding: '5px',
-			paddingBottom: '1.75rem'
+			paddingBottom: '1.75rem',
 		}}>
+
 			{dadosPokemon && dadosPokemon.sprites ? (
 				<Pokemon pokemon={dadosPokemon} />
 			) : (<Typography variant='h6' md={12} lg={12} textAlign='center'>

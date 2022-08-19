@@ -1,5 +1,5 @@
 import { Grid, Box } from '@mui/material';
-import PokeLogo from '../../../assets/PokeLogo.svg';
+import pokemonLogo from '../../../assets/pokemonLogo.svg';
 
 function Header() {
 	return (
@@ -12,7 +12,7 @@ function Header() {
 						textAlign: 'center',
 						paddingBottom: '1.5rem'
 					}}
-					src={PokeLogo}
+					src={pokemonLogo}
 				/>
 			</Grid>
 		</Grid>
