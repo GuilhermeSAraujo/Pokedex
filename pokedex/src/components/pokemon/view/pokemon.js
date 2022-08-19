@@ -1,7 +1,7 @@
 import { Grid, Box, Typography, Divider } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { primeiraLetraParaMaiscula } from '../../../utils/stringUtils';
-import { obtemTipo } from '../../../utils/pokemonUtil';
+import { obtemTipo, obtemStat } from '../../../utils/pokemonUtil';
 
 function Pokemon({ pokemon }) {
 	const [dadosPokemon, setDadosPokemon] = useState({});
@@ -42,7 +42,7 @@ function Pokemon({ pokemon }) {
 				</Typography>
 				{pokemon.stats.map((stat) => {
 					return (
-						<Typography pb='0.5rem'>{primeiraLetraParaMaiscula(stat.stat.name)} = {stat.base_stat}</Typography>
+						<Typography pb='0.5rem'>{`${obtemStat(stat.stat.name)} ${primeiraLetraParaMaiscula(stat.stat.name)}`} = {stat.base_stat}</Typography>
 					)
 				})}
 			</Grid>

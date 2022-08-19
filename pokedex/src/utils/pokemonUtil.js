@@ -91,17 +91,32 @@ const obtemTipo = (tipoBusca) => {
 
 const tiposStat = [
 	{
-		name: 'Hp',
-		icon: '❤'
+		name: 'hp',
+		icon: '❤️'
 	},
-	{ name: 'Attack' },
-	{ name: 'Defense' },
-	{ name: 'Special-attack' },
-	{ name: 'Special-defense' },
-	{ name: 'Speed' },
+	{
+		name: 'attack',
+		icon: '💥'
+	},
+	{
+		name: 'defense',
+		icon: '🛡️'
+	},
+	{
+		name: 'special-attack',
+		icon: '☠️'
+	},
+	{
+		name: 'special-defense',
+		icon: '💊' //🩸
+	},
+	{
+		name: 'speed',
+		icon: '💨'
+	},
 ]
 const obtemStat = (stat) => {
-	return tiposStat.find(tipo => tipo.name.includes(stat));
+	return tiposStat.find(tipo => tipo.name === stat).icon;
 }
 
-export { obtemTipo }
+export { obtemTipo, obtemStat }
