@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import Listagem from '../components/listagem.js'
 import ListaOpcoesService from '../services/listaOpcoesService';
-import Pikachu from '../../../assets/pikachu.gif';
 import { Box, Grid, Typography } from '@mui/material';
+import RandomLoading from '../../../utils/components/randomLoading'
 
 function ListaOpcoes({ displayInfoPokemon }) {
 	const [listaPokemons, setListaPokemons] = useState([]);
@@ -19,6 +19,7 @@ function ListaOpcoes({ displayInfoPokemon }) {
 		displayInfoPokemon(pokemon);
 	}
 
+
 	return (
 
 		<Grid container lg={12} justifyContent='center' textAlign='center'>
@@ -28,14 +29,9 @@ function ListaOpcoes({ displayInfoPokemon }) {
 				<Typography variant='h6' textAlign='center' pb='1rem'>
 					Selecione seu Pokémon
 				</Typography>
-				{listaPokemons.length === 0 ? (<Box
-					component="img"
-					sx={{
-						maxWidth: '30%',
-						marginRight: '0.5rem'
-					}}
-					src={Pikachu}
-				/>) : <Listagem listaPokemons={listaPokemons} handleClickPokemon={handleClickPokemon} />}
+				{listaPokemons.length === 0 ? (
+					<RandomLoading />
+				) : <Listagem listaPokemons={listaPokemons} handleClickPokemon={handleClickPokemon} />}
 
 
 			</Grid>
