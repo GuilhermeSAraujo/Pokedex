@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
+import Listagem from '../components/listagem.js'
 import ListaOpcoesService from '../services/listaOpcoesService';
-import { List, ListItem, ListItemText, Grid, ListItemButton, Typography } from '@mui/material';
+import Pikachu from '../../../assets/pikachu.gif';
+import { Box, Grid, Typography } from '@mui/material';
 
 function ListaOpcoes({ displayInfoPokemon }) {
 	const [listaPokemons, setListaPokemons] = useState([]);
@@ -18,35 +20,24 @@ function ListaOpcoes({ displayInfoPokemon }) {
 	}
 
 	return (
-		<Grid container lg={12} justifyContent='center'>
+
+		<Grid container lg={12} justifyContent='center' textAlign='center'>
 			<Grid item lg={6} maxWidth='350px' sx={{
 				border: '5px',
 			}}>
 				<Typography variant='h6' textAlign='center' pb='1rem'>
 					Selecione seu Pokémon
 				</Typography>
-				<List dense={true} disablePadding={true}
+				{listaPokemons.length === 0 ? (<Box
+					component="img"
 					sx={{
-						width: '100%',
-						maxWidth: 360,
-						bgcolor: 'background.paper',
-						position: 'relative',
-						overflow: 'auto',
-						maxHeight: 300,
-						'& ul': { padding: 0 },
+						maxWidth: '30%',
+						marginRight: '0.5rem'
 					}}
-					subheader={<li />}>
-					{listaPokemons.length > 0 ?
-						listaPokemons.map((p, index) => {
-							return (
-								<ListItem key={index}>
-									<ListItemButton onClick={() => handleClickPokemon(p)}>
-										<ListItemText primary={p.name} />
-									</ListItemButton>
-								</ListItem>
-							)
-						}) : <h3>Buscando Pokémons</h3>}
-				</List>
+					src={Pikachu}
+				/>) : <Listagem listaPokemons={listaPokemons} handleClickPokemon={handleClickPokemon} />}
+
+
 			</Grid>
 		</Grid>
 	)
