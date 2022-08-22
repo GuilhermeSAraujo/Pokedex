@@ -1,7 +1,7 @@
 {
   "name": "pokedex",
   "version": "0.1.0",
-  "homepage": "https://GuilhermeSAraujo.github.io/pokedex",
+  "homepage": "https://GuilhermeSAraujo.github.io/Pokedex",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^5.0.0-beta.5",
