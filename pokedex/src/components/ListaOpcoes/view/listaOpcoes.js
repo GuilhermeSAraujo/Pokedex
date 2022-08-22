@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import ListaOpcoesService from '../services/listaOpcoesService';
-import { List, ListItem, ListItemText, Grid, ListItemButton } from '@mui/material';
+import { List, ListItem, ListItemText, Grid, ListItemButton, Typography } from '@mui/material';
 
 function ListaOpcoes({ displayInfoPokemon }) {
 	const [listaPokemons, setListaPokemons] = useState([]);
@@ -22,6 +22,9 @@ function ListaOpcoes({ displayInfoPokemon }) {
 			<Grid item lg={6} maxWidth='350px' sx={{
 				border: '5px',
 			}}>
+				<Typography variant='h6' textAlign='center' pb='1rem'>
+					Selecione seu Pokémon
+				</Typography>
 				<List dense={true} disablePadding={true}
 					sx={{
 						width: '100%',
