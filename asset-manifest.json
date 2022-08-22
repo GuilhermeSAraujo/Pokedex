@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/Pokedex/static/js/main.b6ad2c02.js",
+    "main.js": "/Pokedex/static/js/main.440f6058.js",
     "static/media/psychic.svg": "/Pokedex/static/media/psychic.6d39afa26483b3a68f815180efcbd3ed.svg",
     "static/media/bug.svg": "/Pokedex/static/media/bug.fecb4d03ec548c2b02f91d7cb04097ef.svg",
     "static/media/poison.svg": "/Pokedex/static/media/poison.1877f98665971f9efc9e1ed612be03c3.svg",
@@ -19,12 +19,13 @@
     "static/media/normal.svg": "/Pokedex/static/media/normal.4f8dfcb1a8dab7d33e8b13eee5e6f2bb.svg",
     "static/media/ice.svg": "/Pokedex/static/media/ice.ef21d45c3fbf9fd3ba2bdc7c895aa2b4.svg",
     "static/media/grass.svg": "/Pokedex/static/media/grass.c547b168d9fb9c57cc5a56ffddd8ebc8.svg",
+    "static/media/pikachu.gif": "/Pokedex/static/media/pikachu.6370776e7872184ab936.gif",
     "static/media/fire.svg": "/Pokedex/static/media/fire.40b3c5d3de857969819f5b841b221e32.svg",
     "static/media/pokemonLogo.svg": "/Pokedex/static/media/pokemonLogo.e57f7ae634ea599f04f057a700d4bbe2.svg",
     "index.html": "/Pokedex/index.html",
-    "main.b6ad2c02.js.map": "/Pokedex/static/js/main.b6ad2c02.js.map"
+    "main.440f6058.js.map": "/Pokedex/static/js/main.440f6058.js.map"
   },
   "entrypoints": [
-    "static/js/main.b6ad2c02.js"
+    "static/js/main.440f6058.js"
   ]
 }
